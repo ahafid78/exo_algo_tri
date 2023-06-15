@@ -1,16 +1,11 @@
-function insertionSort(arr) {
-    const n = arr.length;
-    for (let i = 1; i < n; i++) {
-      let key = arr[i];
-      let j = i - 1;
-      while (j >= 0 && arr[j] > key) {
-        arr[j + 1] = arr[j];
-        j--;
-      }
-      arr[j + 1] = key;
-    }
-  }
-  
-  const array = [4, 2, 7, 1, 9, 5];
-insertionSort(array);
-console.log(array);
+function isPalindrome(word) {
+  word = word.toLowerCase();  // Convert word to lowercase
+  var reversedWord = word.split('').reverse().join('');  // Reverse the word
+  return word === reversedWord;
+}
+var word = prompt("Enter a word:");
+if (isPalindrome(word)) {
+  console.log("The word is a palindrome!");
+} else {
+  console.log("The word is not a palindrome.");
+}
